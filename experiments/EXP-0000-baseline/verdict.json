@@ -1,0 +1,20 @@
+{
+  "experiment_id": "EXP-0000",
+  "candidate_score": 99.65801984521777,
+  "incumbent_score": 99.65801984521777,
+  "delta": 0.0,
+  "valid": true,
+  "promoted": false,
+  "reason": "baseline lock (reference measurement)",
+  "status": "succeeded",
+  "n_trials": null,
+  "mean_delta": null,
+  "noise_floor": null,
+  "significant": null,
+  "details": null,
+  "gate_promoted": null,
+  "gate_decision": "",
+  "host": "Gyalpos-Mac-mini.local",
+  "harness_commit": "ae7b95d0",
+  "created": "2026-09-21T23:22:45Z"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "syk-tfd-prune",
+  "status": "CLOSED",
+  "lane": "realistic",
+  "campaign_kind": "optimize",
+  "cycle": 16,
+  "incumbent_score": 25.8,
+  "promotions": 3,
+  "experiments": 3,
+  "no_promo_streak": 0,
+  "search_runs": 0,
+  "search_hits": 0,
+  "updated": "2026-09-22T23:56:33Z"
+}

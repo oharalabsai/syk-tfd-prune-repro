@@ -1,0 +1,97 @@
+{
+ "INST-A": {
+  "f35_star": 0.9423927657903242,
+  "OSAP": {
+   "full_logical": 751,
+   "full_F": 0.9999422371570695,
+   "cross_logical": 99,
+   "cross_round": 69,
+   "cross_routed": null,
+   "min_routed_at_F35": 160
+  },
+  "SAP": {
+   "full_logical": 751,
+   "full_F": 0.9999422371570695,
+   "cross_logical": 143,
+   "cross_round": 63,
+   "cross_routed": null,
+   "min_routed_at_F35": 168
+  }
+ },
+ "INST-B": {
+  "f35_star": 0.9490574808560127,
+  "OSAP": {
+   "full_logical": 673,
+   "full_F": 0.9999061354505634,
+   "cross_logical": 97,
+   "cross_round": 63,
+   "cross_routed": null,
+   "min_routed_at_F35": 139
+  },
+  "SAP": {
+   "full_logical": 673,
+   "full_F": 0.9999061354505634,
+   "cross_logical": 187,
+   "cross_round": 52,
+   "cross_routed": null,
+   "min_routed_at_F35": 237
+  }
+ },
+ "INST-C": {
+  "f35_star": 0.9360242731347583,
+  "OSAP": {
+   "full_logical": 817,
+   "full_F": 0.9999235511460803,
+   "cross_logical": 93,
+   "cross_round": 75,
+   "cross_routed": null,
+   "min_routed_at_F35": 149
+  },
+  "SAP": {
+   "full_logical": 817,
+   "full_F": 0.9999235511460803,
+   "cross_logical": 133,
+   "cross_round": 67,
+   "cross_routed": null,
+   "min_routed_at_F35": 227
+  }
+ },
+ "INST-D": {
+  "f35_star": 0.9463860167841229,
+  "OSAP": {
+   "full_logical": 763,
+   "full_F": 0.9999349133523789,
+   "cross_logical": 103,
+   "cross_round": 69,
+   "cross_routed": null,
+   "min_routed_at_F35": 168
+  },
+  "SAP": {
+   "full_logical": 763,
+   "full_F": 0.9999349133523789,
+   "cross_logical": 173,
+   "cross_round": 60,
+   "cross_routed": 195,
+   "min_routed_at_F35": 195
+  }
+ },
+ "INST-E": {
+  "f35_star": 0.9383097725880861,
+  "OSAP": {
+   "full_logical": 499,
+   "full_F": 0.9999280356326418,
+   "cross_logical": 41,
+   "cross_round": 60,
+   "cross_routed": 61,
+   "min_routed_at_F35": 61
+  },
+  "SAP": {
+   "full_logical": 499,
+   "full_F": 0.9999280356326418,
+   "cross_logical": 151,
+   "cross_round": 44,
+   "cross_routed": null,
+   "min_routed_at_F35": 253
+  }
+ }
+}

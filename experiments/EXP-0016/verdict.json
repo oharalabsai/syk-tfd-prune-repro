@@ -1,0 +1,20 @@
+{
+  "experiment_id": "EXP-0016",
+  "candidate_score": 25.8,
+  "incumbent_score": 37.521449536650636,
+  "delta": -11.721449536650635,
+  "valid": true,
+  "promoted": true,
+  "reason": "improved",
+  "status": "succeeded",
+  "n_trials": null,
+  "mean_delta": null,
+  "noise_floor": null,
+  "significant": null,
+  "details": null,
+  "gate_promoted": true,
+  "gate_decision": "promoted",
+  "host": "Gyalpos-Mac-mini.local",
+  "harness_commit": "90865829",
+  "created": "2026-09-22T04:35:39Z"
+}

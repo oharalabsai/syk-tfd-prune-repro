@@ -1,0 +1,234 @@
+# Pre-flight — syk-tfd-prune
+
+**Gate: PASSED** (0 blocking, 74 advisory)
+
+Deterministic checks against the engine-derived `FACTS.json`, run before the critic panel is dispatched. No model judgment is involved.
+
+## ADVISORY (74)
+
+- [quantifier] `paper/main.tex:124` — all 20 instances reach
+  - the ledger has 0 distinct instances, not 20. A universal claim over the wrong population is wrong even when every member of it satisfies the claim. ADVISORY only: this campaign's verifier declares no fingerprint(), so the ledger count is an upper bound rather than a count, and a smaller stated number may be right.
+  - id: `edcca30ce43a`
+- [quantifier] `paper/main.tex:25` — The pre-registered decision rule (routed axis, converged anchor, 0.02 margin) returns NULL on all five instances; on Eq
+  - Universal claim over a campaign quantity. Confirm against FACTS.json that it holds for every member, not all but one: 'all 40 are worse on both spreads' failed here because 39 were and one was better on one.
+  - id: `2a2fecd08df0`
+- [quantifier] `paper/main.tex:44` — In this encoding it factorizes as a Bell-like pair on qubits 0 and 1 tensored with $|0\rangle$ on qubits 2 through 7, so it is prepared from $|0\rangle^{\otimes 8}$ by the verified one-CX circuit \texttt{x(1) h(0) cx(0,1) s(0)}, whose fidel
+  - Universal claim over a campaign quantity. Confirm against FACTS.json that it holds for every member, not all but one: 'all 40 are worse on both spreads' failed here because 39 were and one was better on one.
+  - id: `72d8711430aa`
+- [quantifier] `paper/main.tex:93` — Second, the analytic gradient had to pass a central-difference check below $10^{-6}$ at a random $p = 3$ point on each instance
+  - Universal claim over a campaign quantity. Confirm against FACTS.json that it holds for every member, not all but one: 'all 40 are worse on both spreads' failed here because 39 were and one was better on one.
+  - id: `63624554d995`
+- [quantifier] `paper/main.tex:124` — T2 is reported per initialization set: with set B all 20 instances reach $F \geq 0.9999$ by $p = 8$ ($p = 4$: 1, $p = 6$: 5, $p = 7$: 10, $p = 8$: 4), so 4 of 20 need one layer more than the preprint's maximum; with set A, 19 of 20 do not r
+  - Universal claim over a campaign quantity. Confirm against FACTS.json that it holds for every member, not all but one: 'all 40 are worse on both spreads' failed here because 39 were and one was better on one.
+  - id: `2f6625a27729`
+- [quantifier] `paper/main.tex:154` — Pruning a ceiling that does not exist would be uninterpretable, so the first pre-registered gate was reachability: does the unpruned ma-QAOA ansatz reach $F \geq 0.9999$ by $p = 8$? Set B, small initial angles, reaches $F \geq 0.9999$ at $p
+  - Universal claim over a campaign quantity. Confirm against FACTS.json that it holds for every member, not all but one: 'all 40 are worse on both spreads' failed here because 39 were and one was better on one.
+  - id: `ec3bf71d2585`
+- [quantifier] `paper/main.tex:158` — The cost of that reachable point is the reason pruning is needed at all: the converged unpruned circuits cost 499 to 817 logical CNOTs, 14 to 23 times the 35 CNOTs of the block.
+  - Universal claim over a campaign quantity. Confirm against FACTS.json that it holds for every member, not all but one: 'all 40 are worse on both spreads' failed here because 39 were and one was better on one.
+  - id: `be68b3399aab`
+- [quantifier] `paper/main.tex:181` — The pre-registered post-hoc polish ($6 \times 800$) left the best point unchanged to $10^{-14}$ in 9 of 10 instance-algorithm pairs, and moved Row 48 SAP from 0.8158 to 0.8188 (repro package: ), so it changes no verdict
+  - Universal claim over a campaign quantity. Confirm against FACTS.json that it holds for every member, not all but one: 'all 40 are worse on both spreads' failed here because 39 were and one was better on one.
+  - id: `67c2139d9711`
+- [quantifier] `paper/main.tex:183` — On the routed axis the null therefore holds against the best-of-6 anchor on all five instances, but only marginally on Eq
+  - Universal claim over a campaign quantity. Confirm against FACTS.json that it holds for every member, not all but one: 'all 40 are worse on both spreads' failed here because 39 were and one was better on one.
+  - id: `53eb9ecfec23`
+- [quantifier] `paper/main.tex:183` — One confound remains: relative to our earlier certified-instance study , this test changes the encoding (each instance's own map) and the anchor effort (best of 50) together.
+  - Universal claim over a campaign quantity. Confirm against FACTS.json that it holds for every member, not all but one: 'all 40 are worse on both spreads' failed here because 39 were and one was better on one.
+  - id: `d0d56b759232`
+- [quantifier] `paper/main.tex:185` — OSAP beats SAP at $\leq 35$ CZ and at the crossing on all five instances, which is consistent with the preprint's own claim for the ordered variant.
+  - Universal claim over a campaign quantity. Confirm against FACTS.json that it holds for every member, not all but one: 'all 40 are worse on both spreads' failed here because 39 were and one was better on one.
+  - id: `0695c3f07f7b`
+- [quantifier] `paper/main.tex:204` — Every gap exceeds the pre-registered 0.02 margin, so every instance is NULL under the pre-registered rule (routed axis, converged anchor)
+  - Universal claim over a campaign quantity. Confirm against FACTS.json that it holds for every member, not all but one: 'all 40 are worse on both spreads' failed here because 39 were and one was better on one.
+  - id: `04e73590db83`
+- [quantifier] `paper/main.tex:282` — Fitted to convergence at best-of-50, the same block reaches 0.9201, 0.9227, 0.9257, 0.9230 and 0.9439 in the default map, and 0.9424, 0.9491, 0.9360, 0.9464 and 0.9383 in each instance's own map (Table~ ).
+  - Universal claim over a campaign quantity. Confirm against FACTS.json that it holds for every member, not all but one: 'all 40 are worse on both spreads' failed here because 39 were and one was better on one.
+  - id: `2d734dd32f06`
+- [quantifier] `paper/main.tex:284` — Table~ separates them, and they do not always agree: on Eq
+  - Universal claim over a campaign quantity. Confirm against FACTS.json that it holds for every member, not all but one: 'all 40 are worse on both spreads' failed here because 39 were and one was better on one.
+  - id: `351941b507cf`
+- [quantifier] `paper/main.tex:339` — OSAP's dominance over SAP on all five instances, at $\leq 35$ CZ and at the crossing, reproduces the preprint's own ordering and is the part of their contribution this work supports
+  - Universal claim over a campaign quantity. Confirm against FACTS.json that it holds for every member, not all but one: 'all 40 are worse on both spreads' failed here because 39 were and one was better on one.
+  - id: `28f1a5493f77`
+- [literal] `paper/main.tex:25` — 0.938 resolves to no recorded value
+  - Sentence: 11, OSAP reaches $F = 0.925$ at 35 logical CNOTs, above the contract's sealed anchor (0.923) and 0.014 below the converged anchor (0.938), but that circuit routes to 43 CZ, and within 35 routed CZ the. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `0821741e4407`
+- [literal] `paper/main.tex:99` — 0.974 resolves to no recorded value
+  - Sentence: The Table I agreement holds only with small initial angles, $U(-0.1, 0.1)$: the full-range $U(-\pi,\pi)$ misses Table I at $\beta = 10$ (0.974 against 0.988, outside the 0.0057 tolerance), which is wh. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `ffeb03fe5dd0`
+- [literal] `paper/main.tex:120` — 31.4 resolves to no recorded value
+  - Sentence: \ T4 & Table III ($\beta = 10$, $F \approx 0.98$) & SAP blocks / two-qubit gates & 31.4 / 283 & 31 / 292 & 4.4 / 43.6 \\ T4 & Table III ($\beta = 10$, $F \approx 0.98$) & OSAP blocks / two-qubit gates. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `3d1d03f5da3c`
+- [literal] `paper/main.tex:166` — 0.999942 resolves to no recorded value
+  - Sentence: \ \midrule INST-A & Row 42 & 8 & 3 & B ($p=3$) & 0.999942 & 751 \\ INST-B & Row 48 & 3 & 3 & A ($p=3$) & 0.999906 & 673 \\ INST-C & Row 32 & 8 & 3 & B ($p=3$) & 0.999924 & 817 \\ INST-D & Row 30 & 8 &. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `49a6e82aa1c1`
+- [literal] `paper/main.tex:167` — 0.999906 resolves to no recorded value
+  - Sentence: \ INST-B & Row 48 & 3 & 3 & A ($p=3$) & 0.999906 & 673 \\ INST-C & Row 32 & 8 & 3 & B ($p=3$) & 0.999924 & 817 \\ INST-D & Row 30 & 8 & 3 & B ($p=3$) & 0.999935 & 763 \\ INST-E & Eq. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `0fd51e0d9b9e`
+- [literal] `paper/main.tex:168` — 0.999924 resolves to no recorded value
+  - Sentence: \ INST-C & Row 32 & 8 & 3 & B ($p=3$) & 0.999924 & 817 \\ INST-D & Row 30 & 8 & 3 & B ($p=3$) & 0.999935 & 763 \\ INST-E & Eq. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `1e7057138e43`
+- [literal] `paper/main.tex:169` — 0.999935 resolves to no recorded value
+  - Sentence: \ INST-D & Row 30 & 8 & 3 & B ($p=3$) & 0.999935 & 763 \\ INST-E & Eq. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `109ee4b1df71`
+- [literal] `paper/main.tex:181` — 0.8158 resolves to no recorded value
+  - Sentence: The pre-registered post-hoc polish ($6 \times 800$) left the best point unchanged to $10^{-14}$ in 9 of 10 instance-algorithm pairs, and moved Row 48 SAP from 0.8158 to 0.8188 (repro package: ), so it. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `93ac68015a05`
+- [literal] `paper/main.tex:181` — 0.8188 resolves to no recorded value
+  - Sentence: The pre-registered post-hoc polish ($6 \times 800$) left the best point unchanged to $10^{-14}$ in 9 of 10 instance-algorithm pairs, and moved Row 48 SAP from 0.8158 to 0.8188 (repro package: ), so it. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `5b9703998994`
+- [literal] `paper/main.tex:181` — 0.924 resolves to no recorded value
+  - Sentence: At exactly 35 logical CNOTs OSAP reaches $F = 0.925$ there, above the contract's sealed anchor (0.923) and the best-of-6 instance-map anchor (0.924) and 0.014 below the converged anchor (0.938); that . It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `9cdd4fbbb9e4`
+- [literal] `paper/main.tex:181` — 0.938 resolves to no recorded value
+  - Sentence: At exactly 35 logical CNOTs OSAP reaches $F = 0.925$ there, above the contract's sealed anchor (0.923) and the best-of-6 instance-map anchor (0.924) and 0.014 below the converged anchor (0.938); that . It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `b1e91cca0862`
+- [literal] `paper/main.tex:197` — 0.9424 resolves to no recorded value
+  - Sentence: \ \midrule INST-A (Row 42) & 0.9424 & 0.8019 & 22 & 0.7661 & 29 & NULL \\ INST-B (Row 48) & 0.9491 & 0.8389 & 34 & 0.8158 & 31 & NULL \\ INST-C (Row 32) & 0.9360 & 0.8364 & 29 & 0.8043 & 29 & NULL \\ . It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `8092d61c57e0`
+- [literal] `paper/main.tex:197` — 0.8019 resolves to no recorded value
+  - Sentence: \ \midrule INST-A (Row 42) & 0.9424 & 0.8019 & 22 & 0.7661 & 29 & NULL \\ INST-B (Row 48) & 0.9491 & 0.8389 & 34 & 0.8158 & 31 & NULL \\ INST-C (Row 32) & 0.9360 & 0.8364 & 29 & 0.8043 & 29 & NULL \\ . It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `4538b225e5db`
+- [literal] `paper/main.tex:197` — 0.7661 resolves to no recorded value
+  - Sentence: \ \midrule INST-A (Row 42) & 0.9424 & 0.8019 & 22 & 0.7661 & 29 & NULL \\ INST-B (Row 48) & 0.9491 & 0.8389 & 34 & 0.8158 & 31 & NULL \\ INST-C (Row 32) & 0.9360 & 0.8364 & 29 & 0.8043 & 29 & NULL \\ . It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `381a7e0abbdd`
+- [literal] `paper/main.tex:198` — 0.9491 resolves to no recorded value
+  - Sentence: \ INST-B (Row 48) & 0.9491 & 0.8389 & 34 & 0.8158 & 31 & NULL \\ INST-C (Row 32) & 0.9360 & 0.8364 & 29 & 0.8043 & 29 & NULL \\ INST-D (Row 30) & 0.9464 & 0.8282 & 22 & 0.8052 & 19 & NULL \\ INST-E (E. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `37597c3a469b`
+- [literal] `paper/main.tex:198` — 0.8389 resolves to no recorded value
+  - Sentence: \ INST-B (Row 48) & 0.9491 & 0.8389 & 34 & 0.8158 & 31 & NULL \\ INST-C (Row 32) & 0.9360 & 0.8364 & 29 & 0.8043 & 29 & NULL \\ INST-D (Row 30) & 0.9464 & 0.8282 & 22 & 0.8052 & 19 & NULL \\ INST-E (E. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `414a03f4f44c`
+- [literal] `paper/main.tex:198` — 0.8158 resolves to no recorded value
+  - Sentence: \ INST-B (Row 48) & 0.9491 & 0.8389 & 34 & 0.8158 & 31 & NULL \\ INST-C (Row 32) & 0.9360 & 0.8364 & 29 & 0.8043 & 29 & NULL \\ INST-D (Row 30) & 0.9464 & 0.8282 & 22 & 0.8052 & 19 & NULL \\ INST-E (E. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `aaef2e6693f7`
+- [literal] `paper/main.tex:199` — 0.9360 resolves to no recorded value
+  - Sentence: \ INST-C (Row 32) & 0.9360 & 0.8364 & 29 & 0.8043 & 29 & NULL \\ INST-D (Row 30) & 0.9464 & 0.8282 & 22 & 0.8052 & 19 & NULL \\ INST-E (Eq. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `f9a1cb22754d`
+- [literal] `paper/main.tex:199` — 0.8364 resolves to no recorded value
+  - Sentence: \ INST-C (Row 32) & 0.9360 & 0.8364 & 29 & 0.8043 & 29 & NULL \\ INST-D (Row 30) & 0.9464 & 0.8282 & 22 & 0.8052 & 19 & NULL \\ INST-E (Eq. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `24d1c963a80e`
+- [literal] `paper/main.tex:199` — 0.8043 resolves to no recorded value
+  - Sentence: \ INST-C (Row 32) & 0.9360 & 0.8364 & 29 & 0.8043 & 29 & NULL \\ INST-D (Row 30) & 0.9464 & 0.8282 & 22 & 0.8052 & 19 & NULL \\ INST-E (Eq. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `02dc3a4d4176`
+- [literal] `paper/main.tex:200` — 0.9464 resolves to no recorded value
+  - Sentence: \ INST-D (Row 30) & 0.9464 & 0.8282 & 22 & 0.8052 & 19 & NULL \\ INST-E (Eq. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `571c7afdb32d`
+- [literal] `paper/main.tex:200` — 0.8282 resolves to no recorded value
+  - Sentence: \ INST-D (Row 30) & 0.9464 & 0.8282 & 22 & 0.8052 & 19 & NULL \\ INST-E (Eq. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `d6dae1b5fc1f`
+- [literal] `paper/main.tex:200` — 0.8052 resolves to no recorded value
+  - Sentence: \ INST-D (Row 30) & 0.9464 & 0.8282 & 22 & 0.8052 & 19 & NULL \\ INST-E (Eq. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `5805f4ce8196`
+- [literal] `paper/main.tex:218` — 0.802 resolves to no recorded value
+  - Sentence: \ \midrule INST-A (Row 42) & 0.802 & 0.826 & 37 & 0.942 & 0.898 & 0.8955 \\ INST-B (Row 48) & 0.839 & 0.839 & 34 & 0.949 & 0.906 & 0.9164 \\ INST-C (Row 32) & 0.836 & 0.836 & 29 & 0.936 & 0.936 & 0.90. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `3bff1bcd367c`
+- [literal] `paper/main.tex:218` — 0.826 resolves to no recorded value
+  - Sentence: \ \midrule INST-A (Row 42) & 0.802 & 0.826 & 37 & 0.942 & 0.898 & 0.8955 \\ INST-B (Row 48) & 0.839 & 0.839 & 34 & 0.949 & 0.906 & 0.9164 \\ INST-C (Row 32) & 0.836 & 0.836 & 29 & 0.936 & 0.936 & 0.90. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `efe16eb75ddb`
+- [literal] `paper/main.tex:218` — 0.942 resolves to no recorded value
+  - Sentence: \ \midrule INST-A (Row 42) & 0.802 & 0.826 & 37 & 0.942 & 0.898 & 0.8955 \\ INST-B (Row 48) & 0.839 & 0.839 & 34 & 0.949 & 0.906 & 0.9164 \\ INST-C (Row 32) & 0.836 & 0.836 & 29 & 0.936 & 0.936 & 0.90. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `e6b818cf1dc5`
+- [literal] `paper/main.tex:218` — 0.898 resolves to no recorded value
+  - Sentence: \ \midrule INST-A (Row 42) & 0.802 & 0.826 & 37 & 0.942 & 0.898 & 0.8955 \\ INST-B (Row 48) & 0.839 & 0.839 & 34 & 0.949 & 0.906 & 0.9164 \\ INST-C (Row 32) & 0.836 & 0.836 & 29 & 0.936 & 0.936 & 0.90. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `f5c6bed56ccc`
+- [literal] `paper/main.tex:219` — 0.839 resolves to no recorded value
+  - Sentence: \ INST-B (Row 48) & 0.839 & 0.839 & 34 & 0.949 & 0.906 & 0.9164 \\ INST-C (Row 32) & 0.836 & 0.836 & 29 & 0.936 & 0.936 & 0.9011 \\ INST-D (Row 30) & 0.828 & 0.828 & 22 & 0.946 & 0.918 & 0.9228 \\ INS. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `a8799b095d2e`
+- [literal] `paper/main.tex:219` — 0.839 resolves to no recorded value
+  - Sentence: \ INST-B (Row 48) & 0.839 & 0.839 & 34 & 0.949 & 0.906 & 0.9164 \\ INST-C (Row 32) & 0.836 & 0.836 & 29 & 0.936 & 0.936 & 0.9011 \\ INST-D (Row 30) & 0.828 & 0.828 & 22 & 0.946 & 0.918 & 0.9228 \\ INS. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `a8799b095d2e`
+- [literal] `paper/main.tex:219` — 0.949 resolves to no recorded value
+  - Sentence: \ INST-B (Row 48) & 0.839 & 0.839 & 34 & 0.949 & 0.906 & 0.9164 \\ INST-C (Row 32) & 0.836 & 0.836 & 29 & 0.936 & 0.936 & 0.9011 \\ INST-D (Row 30) & 0.828 & 0.828 & 22 & 0.946 & 0.918 & 0.9228 \\ INS. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `3ec962a7a163`
+- [literal] `paper/main.tex:219` — 0.906 resolves to no recorded value
+  - Sentence: \ INST-B (Row 48) & 0.839 & 0.839 & 34 & 0.949 & 0.906 & 0.9164 \\ INST-C (Row 32) & 0.836 & 0.836 & 29 & 0.936 & 0.936 & 0.9011 \\ INST-D (Row 30) & 0.828 & 0.828 & 22 & 0.946 & 0.918 & 0.9228 \\ INS. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `70d83f062fc1`
+- [literal] `paper/main.tex:220` — 0.836 resolves to no recorded value
+  - Sentence: \ INST-C (Row 32) & 0.836 & 0.836 & 29 & 0.936 & 0.936 & 0.9011 \\ INST-D (Row 30) & 0.828 & 0.828 & 22 & 0.946 & 0.918 & 0.9228 \\ INST-E (Eq. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `c247ed479f88`
+- [literal] `paper/main.tex:220` — 0.836 resolves to no recorded value
+  - Sentence: \ INST-C (Row 32) & 0.836 & 0.836 & 29 & 0.936 & 0.936 & 0.9011 \\ INST-D (Row 30) & 0.828 & 0.828 & 22 & 0.946 & 0.918 & 0.9228 \\ INST-E (Eq. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `c247ed479f88`
+- [literal] `paper/main.tex:220` — 0.936 resolves to no recorded value
+  - Sentence: \ INST-C (Row 32) & 0.836 & 0.836 & 29 & 0.936 & 0.936 & 0.9011 \\ INST-D (Row 30) & 0.828 & 0.828 & 22 & 0.946 & 0.918 & 0.9228 \\ INST-E (Eq. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `3a0d90c6ffcd`
+- [literal] `paper/main.tex:220` — 0.936 resolves to no recorded value
+  - Sentence: \ INST-C (Row 32) & 0.836 & 0.836 & 29 & 0.936 & 0.936 & 0.9011 \\ INST-D (Row 30) & 0.828 & 0.828 & 22 & 0.946 & 0.918 & 0.9228 \\ INST-E (Eq. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `3a0d90c6ffcd`
+- [literal] `paper/main.tex:221` — 0.828 resolves to no recorded value
+  - Sentence: \ INST-D (Row 30) & 0.828 & 0.828 & 22 & 0.946 & 0.918 & 0.9228 \\ INST-E (Eq. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `a286cca84457`
+- [literal] `paper/main.tex:221` — 0.828 resolves to no recorded value
+  - Sentence: \ INST-D (Row 30) & 0.828 & 0.828 & 22 & 0.946 & 0.918 & 0.9228 \\ INST-E (Eq. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `a286cca84457`
+- [literal] `paper/main.tex:221` — 0.946 resolves to no recorded value
+  - Sentence: \ INST-D (Row 30) & 0.828 & 0.828 & 22 & 0.946 & 0.918 & 0.9228 \\ INST-E (Eq. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `dcc4549ea48e`
+- [literal] `paper/main.tex:221` — 0.918 resolves to no recorded value
+  - Sentence: \ INST-D (Row 30) & 0.828 & 0.828 & 22 & 0.946 & 0.918 & 0.9228 \\ INST-E (Eq. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `71a6915422c5`
+- [literal] `paper/main.tex:282` — 0.9424 resolves to no recorded value
+  - Sentence: Fitted to convergence at best-of-50, the same block reaches 0.9201, 0.9227, 0.9257, 0.9230 and 0.9439 in the default map, and 0.9424, 0.9491, 0.9360, 0.9464 and 0.9383 in each instance's own map (Tabl. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `c14ac0402b5d`
+- [literal] `paper/main.tex:282` — 0.9491 resolves to no recorded value
+  - Sentence: Fitted to convergence at best-of-50, the same block reaches 0.9201, 0.9227, 0.9257, 0.9230 and 0.9439 in the default map, and 0.9424, 0.9491, 0.9360, 0.9464 and 0.9383 in each instance's own map (Tabl. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `267e50215d27`
+- [literal] `paper/main.tex:282` — 0.9360 resolves to no recorded value
+  - Sentence: Fitted to convergence at best-of-50, the same block reaches 0.9201, 0.9227, 0.9257, 0.9230 and 0.9439 in the default map, and 0.9424, 0.9491, 0.9360, 0.9464 and 0.9383 in each instance's own map (Tabl. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `e0ee890d7577`
+- [literal] `paper/main.tex:282` — 0.9464 resolves to no recorded value
+  - Sentence: Fitted to convergence at best-of-50, the same block reaches 0.9201, 0.9227, 0.9257, 0.9230 and 0.9439 in the default map, and 0.9424, 0.9491, 0.9360, 0.9464 and 0.9383 in each instance's own map (Tabl. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `5a48269f6ad6`
+- [literal] `paper/main.tex:282` — 0.9383 resolves to no recorded value
+  - Sentence: Fitted to convergence at best-of-50, the same block reaches 0.9201, 0.9227, 0.9257, 0.9230 and 0.9439 in the default map, and 0.9424, 0.9491, 0.9360, 0.9464 and 0.9383 in each instance's own map (Tabl. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `f4124ae1cb23`
+- [literal] `paper/main.tex:284` — 0.936 resolves to no recorded value
+  - Sentence: The useful statement for anyone comparing preparation circuits on these instances is that the fixed 35-CNOT block is worth 0.936 to 0.949 at $\beta = 3$, above the 0.887 to 0.915 in our earlier certif. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `31985f7f8635`
+- [literal] `paper/main.tex:284` — 0.9383 resolves to no recorded value
+  - Sentence: 11 the instance map at best-of-50 (0.9383) is below the default map at best-of-50 (0.9439).. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `bfd64c658ec9`
+- [literal] `paper/main.tex:293` — 0.9201 resolves to no recorded value
+  - Sentence: \ \midrule INST-A (Row 42) & 0.8955 & 0.9201 & 0.8984 & 0.9424 \\ INST-B (Row 48) & 0.9164 & 0.9227 & 0.9059 & 0.9491 \\ INST-C (Row 32) & 0.9011 & 0.9257 & 0.9360 & 0.9360 \\ INST-D (Row 30) & 0.9228. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `055827c30f44`
+- [literal] `paper/main.tex:293` — 0.8984 resolves to no recorded value
+  - Sentence: \ \midrule INST-A (Row 42) & 0.8955 & 0.9201 & 0.8984 & 0.9424 \\ INST-B (Row 48) & 0.9164 & 0.9227 & 0.9059 & 0.9491 \\ INST-C (Row 32) & 0.9011 & 0.9257 & 0.9360 & 0.9360 \\ INST-D (Row 30) & 0.9228. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `3c15cf475309`
+- [literal] `paper/main.tex:293` — 0.9424 resolves to no recorded value
+  - Sentence: \ \midrule INST-A (Row 42) & 0.8955 & 0.9201 & 0.8984 & 0.9424 \\ INST-B (Row 48) & 0.9164 & 0.9227 & 0.9059 & 0.9491 \\ INST-C (Row 32) & 0.9011 & 0.9257 & 0.9360 & 0.9360 \\ INST-D (Row 30) & 0.9228. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `7f68cfad3f4c`
+- [literal] `paper/main.tex:294` — 0.9227 resolves to no recorded value
+  - Sentence: \ INST-B (Row 48) & 0.9164 & 0.9227 & 0.9059 & 0.9491 \\ INST-C (Row 32) & 0.9011 & 0.9257 & 0.9360 & 0.9360 \\ INST-D (Row 30) & 0.9228 & 0.9230 & 0.9181 & 0.9464 \\ INST-E (Eq. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `7b0e24837e93`
+- [literal] `paper/main.tex:294` — 0.9059 resolves to no recorded value
+  - Sentence: \ INST-B (Row 48) & 0.9164 & 0.9227 & 0.9059 & 0.9491 \\ INST-C (Row 32) & 0.9011 & 0.9257 & 0.9360 & 0.9360 \\ INST-D (Row 30) & 0.9228 & 0.9230 & 0.9181 & 0.9464 \\ INST-E (Eq. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `636b311d8362`
+- [literal] `paper/main.tex:294` — 0.9491 resolves to no recorded value
+  - Sentence: \ INST-B (Row 48) & 0.9164 & 0.9227 & 0.9059 & 0.9491 \\ INST-C (Row 32) & 0.9011 & 0.9257 & 0.9360 & 0.9360 \\ INST-D (Row 30) & 0.9228 & 0.9230 & 0.9181 & 0.9464 \\ INST-E (Eq. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `7ce442ab4f65`
+- [literal] `paper/main.tex:295` — 0.9257 resolves to no recorded value
+  - Sentence: \ INST-C (Row 32) & 0.9011 & 0.9257 & 0.9360 & 0.9360 \\ INST-D (Row 30) & 0.9228 & 0.9230 & 0.9181 & 0.9464 \\ INST-E (Eq. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `bd473a6a1cbb`
+- [literal] `paper/main.tex:295` — 0.9360 resolves to no recorded value
+  - Sentence: \ INST-C (Row 32) & 0.9011 & 0.9257 & 0.9360 & 0.9360 \\ INST-D (Row 30) & 0.9228 & 0.9230 & 0.9181 & 0.9464 \\ INST-E (Eq. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `9698b6da1707`
+- [literal] `paper/main.tex:295` — 0.9360 resolves to no recorded value
+  - Sentence: \ INST-C (Row 32) & 0.9011 & 0.9257 & 0.9360 & 0.9360 \\ INST-D (Row 30) & 0.9228 & 0.9230 & 0.9181 & 0.9464 \\ INST-E (Eq. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `9698b6da1707`
+- [literal] `paper/main.tex:296` — 0.9230 resolves to no recorded value
+  - Sentence: \ INST-D (Row 30) & 0.9228 & 0.9230 & 0.9181 & 0.9464 \\ INST-E (Eq. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `5a4d115eb4ef`
+- [literal] `paper/main.tex:296` — 0.9181 resolves to no recorded value
+  - Sentence: \ INST-D (Row 30) & 0.9228 & 0.9230 & 0.9181 & 0.9464 \\ INST-E (Eq. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `ee54d1387e95`
+- [literal] `paper/main.tex:296` — 0.9464 resolves to no recorded value
+  - Sentence: \ INST-D (Row 30) & 0.9228 & 0.9230 & 0.9181 & 0.9464 \\ INST-E (Eq. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `5bba533fe8df`
+- [literal] `paper/main.tex:341` — 0.9424 resolves to no recorded value
+  - Sentence: Ours moved by up to 0.047 fidelity against the contract anchor (Row 42: 0.8955 to 0.9424), and by up to 0.061 against the figures of our earlier study , which is larger than most of the differences su. It is in neither FACTS.json, the frozen contract, nor the campaign's code. Either cite where it comes from or replace it with a recorded value.
+  - id: `d9b34a01d2e0`
+
+## Not checked
+
+- numbers inside tikzpicture/axis bodies and \addplot coordinates are not checked: they are plot data, and the index heuristic is not reliable there

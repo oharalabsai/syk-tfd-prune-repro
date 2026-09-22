@@ -1,0 +1,60 @@
+{
+  "agent": "critic (adversarial promotion audit, EXP-0016)",
+  "bottom_line": "No exploit found. Both scored quantities (fidelity against the sealed target and the two-qubit count) are recomputed by the sealed scorer from the emitted gate list, the candidate's only two-qubit gate is cx, it reads no battery data and hardcodes no angles, and the score of exactly 25.8 (= 129/5, an exact integer total) forces the 1000x fidelity-penalty term to be identically zero on all five instances, so the -11.72 is a real cost reduction from 165 to 129 cx at or above the sealed F35 everywhere. Two comparability/record-keeping caveats that do not threaten the promotion: about 0.6 of the delta is the wall-clock-dependent incumbent degrading under the new parallel scorer, and the pre-registered per-instance DIAG was never persisted, so the ship condition's per-instance C2<35 clause is not yet verifiable. Promotion should stand.",
+  "findings": [
+    {
+      "claim": "No metric-letter exploit exists: the score's two ingredients are both scorer-computed from the gate list, and the candidate's gate vocabulary offers no cheaper-counting substitute.",
+      "verdict": "VERIFIED",
+      "severity": "NONE",
+      "note": "candidate.py emits only h/rz/rx/cx (masked_block_gates, line 112-126; H_PREFIX, line 81). cx is the sole two-qubit gate and costs 1 each, so the logical cost equals mask.sum() with no rzz/rxx/ryy repackaging and no way to hide entanglement in a cheaper-weighted gate. The candidate's own F_self is used only to steer the search; CONTRACT.md states the scorer discards everything the candidate reports."
+    },
+    {
+      "claim": "No battery access, no cached or hardcoded answer: every angle is fit at run time and the only instance-keyed constants are the publicly published anchors.",
+      "verdict": "VERIFIED",
+      "severity": "NONE",
+      "note": "grep over candidate.py for scorekeeper|open(|np.load|pickle|glob|subprocess|environ returns only os.path.dirname(__file__) for sys.path (line 36) and json.dumps for DIAG (line 477). block_angles() is a seeded uniform draw, not a solved array (lines 59-62). ANCHOR (lines 103-109) is the 0.8955/0.9164/0.9011/0.9228/0.9229 list printed verbatim in CONTRACT.md's public Metric paragraph, which the contract explicitly designates as contract data."
+    },
+    {
+      "claim": "The improvement is scorer-verified, not self-reported: an exact integer score total proves zero fidelity debt on all five instances, which also independently confirms the candidate's target reconstruction matches the sealed target.",
+      "verdict": "VERIFIED",
+      "severity": "NONE",
+      "note": "candidate_score 25.8 => total 129.000. The per-instance score is 1000*max(0,F35-F)+C2 with C2 integer; any nonzero deficit contributes a continuous float, so an exact integer total is only reachable with every deficit at 0. Incumbent 37.5214495*5 = 187.6072, minus the campaign's measured 22.617 penalty points leaves 165 cx. So the candidate bought 36 gates AND closed the ~0.0226 debt, with fidelity checked by the sealed scorer against the sealed target rather than by the candidate. If the candidate's build_target had drifted from the sealed convention, the debt would have reappeared as a non-integer score."
+    },
+    {
+      "claim": "The pre-registered budget fits the clock: the objection that 520 trial fits would blow the 3600 s eval timeout under five-way parallelism is empirically resolved.",
+      "verdict": "VERIFIED",
+      "severity": "NONE",
+      "note": "hypothesis.json created 04:12:58Z, verdict.json created 04:35:39Z, i.e. the whole cycle including scoring ran in about 23 minutes with valid=true on all five. No timeout, no guard-path emission implied by the integer score."
+    },
+    {
+      "claim": "Comparability: roughly 0.6 of the -11.72 delta is the incumbent getting worse, not the candidate getting better, because the incumbent contains a 240 s wall-clock deadline and was rescored under the new five-way parallel scorer.",
+      "verdict": "CONFIRMED",
+      "severity": "PRESENTATION",
+      "note": "EXP-0014 measured that same circuit at 36.9214495 (total 184.6072); this cycle's rescore is 37.5214495 (total 187.6072), exactly +3.0, i.e. three fewer gate removals, with the fidelity-debt term unchanged to ~1e-5. The cause is in the incumbent, not the candidate: workspace/incumbent.py checks time.monotonic against DEADLINE_S=240 inside the slot loop, so contention across five forked workers truncates its descent. The candidate is clock-free (no time import). The honest candidate-side gain versus EXP-0014's own measurement is about -11.12. Nothing here is candidate reward hacking, but the paper must not quote -11.72 as if the baseline were fixed."
+    },
+    {
+      "claim": "The pre-registered DIAG record was never persisted, so the hypothesis's own mechanism predictions and the contract's per-instance ship-condition clause cannot be checked from the artifacts.",
+      "verdict": "CONFIRMED",
+      "severity": "PRESENTATION",
+      "note": "experiments/EXP-0016 contains only candidate.py, hypothesis.json, verdict.json; no DIAG line survives anywhere in the campaign tree. done_definition required per-instance name/anchor/F_full/escalation/s_trace/trace/round1_table/removed_slots/fits_used/rounds/stop_reason/emitted. Consequence: predictions (1) single-instance debt, (2) that instance's s_hat <= 40, (3) no regression on the four pruned instances are all unverifiable, and the ship condition ('every instance at F>=F35 and C2 STRICTLY below 35') is not implied by the 129 total: 35+24+24+23+23 = 129 also satisfies the mean while violating the per-instance clause. Capture the DIAG (a rerun is deterministic) before any paper states a per-instance fidelity-vs-cost curve or declares the ship condition met."
+    },
+    {
+      "claim": "The challenger's blocking OBJECTION 1 was not implemented: selection ties on the above-anchor plateau are broken by slot index rather than by fidelity, so the descent is fidelity-blind exactly where it does most of its work.",
+      "verdict": "CONFIRMED",
+      "severity": "NICE-TO-HAVE",
+      "note": "candidate.py uses min(trials, key=lambda t: (t[0], t[1])) where t[0]=s_hat and t[1]=the slot index; the brief-mandated fix was (s_hat, -f_trial). Above anchor+SAFETY the penalty term is exactly 0.0, so every feasible trial in a round shares s_hat = cost-1 and the accepted removal is the lowest live slot, discarding the least-damage ranking that funded cycle 14's removals. This can only understate the achievable result (it burns headroom faster and stops the descent earlier), so it is not an exploit; it does mean 129 is an upper bound on what this mechanism reaches, and the 'arg-min protects the earlier endpoints' argument holds only against this run's own trace, not against EXP-0014's."
+    },
+    {
+      "claim": "The one hard integrity check in the emission path is silently defeated by the guard.",
+      "verdict": "CONFIRMED",
+      "severity": "NICE-TO-HAVE",
+      "note": "Emission raises RuntimeError if abs(f_sim - p['F_self']) > 1e-9, but the except-Exception guard rebuilds gates from the same best_point['x'] and best_point['mask'] and emits that identical circuit, recording only diag['guard']. A forward/simulate disagreement therefore ships the circuit anyway. It cannot inflate the score (the scorer recomputes fidelity itself) and the integer score shows the guard did not fire here, but the check as written is a no-op and should either emit the seed-0 full block on that specific failure or record it as a distinct stop_reason."
+    },
+    {
+      "claim": "name_seed packs offsets into a 64-wide block while consolidation offsets run 102 to 136, so the advertised per-name seed partition is false.",
+      "verdict": "CONFIRMED",
+      "severity": "NICE-TO-HAVE",
+      "note": "(int(sha256(name)[:12],16) % 1000000) * 64 + offset aliases instance n's consolidation seeds onto the reserved range of a name whose hash lands 2 or 3 higher. Determinism and the contract's 'seed on payload[name], never on call order' requirement are still satisfied (the seed remains a pure function of name and mask size), so nothing about exchangeability breaks with five names; only the stated invariant is wrong. Widen the multiplier to 1024 or hash the (name, offset) pair."
+    }
+  ]
+}

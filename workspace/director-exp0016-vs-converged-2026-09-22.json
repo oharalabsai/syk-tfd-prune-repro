@@ -1,0 +1,39 @@
+{
+ "source": "re-score of experiments/EXP-0016/candidate.py through scorekeeper_private/syk-tfd-prune/scorer.py (default-map targets), 2026-09-22; anchors = dmap entries of director-f35-imap-2026-09-22.json",
+ "note": "the contract F35 for Row 30 (0.9228) came from the pre-registered 12-init escalation, not best-of-6",
+ "INST-A": {
+  "F": 0.896461,
+  "C2": 26,
+  "dmap_best6": 0.8954892220648886,
+  "dmap_best50": 0.9200949487126302,
+  "clears_best50": false
+ },
+ "INST-B": {
+  "F": 0.922637,
+  "C2": 28,
+  "dmap_best6": 0.9164019534129355,
+  "dmap_best50": 0.9226978161414684,
+  "clears_best50": false
+ },
+ "INST-C": {
+  "F": 0.906372,
+  "C2": 24,
+  "dmap_best6": 0.9011259696984413,
+  "dmap_best50": 0.9256538045389601,
+  "clears_best50": false
+ },
+ "INST-D": {
+  "F": 0.925392,
+  "C2": 24,
+  "dmap_best6": 0.8975817756608598,
+  "dmap_best50": 0.9229916082973346,
+  "clears_best50": true
+ },
+ "INST-E": {
+  "F": 0.925939,
+  "C2": 27,
+  "dmap_best6": 0.922946409412072,
+  "dmap_best50": 0.9439101344576611,
+  "clears_best50": false
+ }
+}

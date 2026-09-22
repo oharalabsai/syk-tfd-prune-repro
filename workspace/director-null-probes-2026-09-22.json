@@ -1,0 +1,483 @@
+{
+ "label": "POST-HOC robustness probes; not pre-registered; the verdict stays the pre-registered one",
+ "p1": [
+  {
+   "instance": "INST-A",
+   "p": 4,
+   "fit_F": 0.9999835365189104,
+   "best_F_logical_le35": 0.819892177168534,
+   "rounds": 105
+  },
+  {
+   "instance": "INST-A",
+   "p": 5,
+   "fit_F": 0.9999933625584391,
+   "best_F_logical_le35": 0.7963095948707041,
+   "rounds": 131
+  },
+  {
+   "instance": "INST-B",
+   "p": 4,
+   "fit_F": 0.9999880391502473,
+   "best_F_logical_le35": 0.8383226901861128,
+   "rounds": 97
+  },
+  {
+   "instance": "INST-B",
+   "p": 5,
+   "fit_F": 0.9999965545523012,
+   "best_F_logical_le35": 0.8383226901861118,
+   "rounds": 121
+  },
+  {
+   "instance": "INST-C",
+   "p": 4,
+   "fit_F": 0.9999723281400236,
+   "best_F_logical_le35": 0.8364289946265505,
+   "rounds": 113
+  },
+  {
+   "instance": "INST-C",
+   "p": 5,
+   "fit_F": 0.9999812545075976,
+   "best_F_logical_le35": 0.816825781263415,
+   "rounds": 141
+  },
+  {
+   "instance": "INST-D",
+   "p": 4,
+   "fit_F": 0.9999477367775961,
+   "best_F_logical_le35": 0.8518995333976784,
+   "rounds": 105
+  },
+  {
+   "instance": "INST-D",
+   "p": 5,
+   "fit_F": 0.9999831717166866,
+   "best_F_logical_le35": 0.8518995333976789,
+   "rounds": 131
+  },
+  {
+   "instance": "INST-E",
+   "p": 4,
+   "fit_F": 0.9999030970579251,
+   "best_F_logical_le35": 0.8977083765716141,
+   "rounds": 89
+  },
+  {
+   "instance": "INST-E",
+   "p": 5,
+   "fit_F": 0.9999863968138117,
+   "best_F_logical_le35": 0.8920000618104137,
+   "rounds": 111
+  }
+ ],
+ "p2": [
+  {
+   "instance": "INST-A",
+   "algo": "OSAP",
+   "round": 75,
+   "logical_cost": 35,
+   "refit_best_F": 0.8256382862375928
+  },
+  {
+   "instance": "INST-A",
+   "algo": "OSAP",
+   "round": 76,
+   "logical_cost": 21,
+   "refit_best_F": 0.8019270282587572
+  },
+  {
+   "instance": "INST-A",
+   "algo": "OSAP",
+   "round": 77,
+   "logical_cost": 7,
+   "refit_best_F": 0.7714292010210498
+  },
+  {
+   "instance": "INST-A",
+   "algo": "OSAP",
+   "round": 78,
+   "logical_cost": 1,
+   "refit_best_F": 0.744095447851298
+  },
+  {
+   "instance": "INST-A",
+   "algo": "SAP",
+   "round": 73,
+   "logical_cost": 35,
+   "refit_best_F": 0.7661198556488743
+  },
+  {
+   "instance": "INST-A",
+   "algo": "SAP",
+   "round": 74,
+   "logical_cost": 21,
+   "refit_best_F": 0.7661198556488743
+  },
+  {
+   "instance": "INST-A",
+   "algo": "SAP",
+   "round": 75,
+   "logical_cost": 7,
+   "refit_best_F": 0.7440954478512976
+  },
+  {
+   "instance": "INST-A",
+   "algo": "SAP",
+   "round": 76,
+   "logical_cost": 5,
+   "refit_best_F": 0.7440954478512976
+  },
+  {
+   "instance": "INST-A",
+   "algo": "SAP",
+   "round": 77,
+   "logical_cost": 3,
+   "refit_best_F": 0.7440954478512976
+  },
+  {
+   "instance": "INST-A",
+   "algo": "SAP",
+   "round": 78,
+   "logical_cost": 1,
+   "refit_best_F": 0.744095447851298
+  },
+  {
+   "instance": "INST-B",
+   "algo": "OSAP",
+   "round": 69,
+   "logical_cost": 31,
+   "refit_best_F": 0.8389377819516448
+  },
+  {
+   "instance": "INST-B",
+   "algo": "OSAP",
+   "round": 70,
+   "logical_cost": 23,
+   "refit_best_F": 0.8115299509451801
+  },
+  {
+   "instance": "INST-B",
+   "algo": "OSAP",
+   "round": 71,
+   "logical_cost": 15,
+   "refit_best_F": 0.7787769105717235
+  },
+  {
+   "instance": "INST-B",
+   "algo": "OSAP",
+   "round": 72,
+   "logical_cost": 1,
+   "refit_best_F": 0.7540825719753068
+  },
+  {
+   "instance": "INST-B",
+   "algo": "SAP",
+   "round": 69,
+   "logical_cost": 35,
+   "refit_best_F": 0.8187669804010407
+  },
+  {
+   "instance": "INST-B",
+   "algo": "SAP",
+   "round": 70,
+   "logical_cost": 21,
+   "refit_best_F": 0.7939937624283442
+  },
+  {
+   "instance": "INST-B",
+   "algo": "SAP",
+   "round": 71,
+   "logical_cost": 11,
+   "refit_best_F": 0.7705979822855957
+  },
+  {
+   "instance": "INST-B",
+   "algo": "SAP",
+   "round": 72,
+   "logical_cost": 1,
+   "refit_best_F": 0.7540825719753068
+  },
+  {
+   "instance": "INST-C",
+   "algo": "OSAP",
+   "round": 81,
+   "logical_cost": 35,
+   "refit_best_F": 0.8364289946265517
+  },
+  {
+   "instance": "INST-C",
+   "algo": "OSAP",
+   "round": 82,
+   "logical_cost": 23,
+   "refit_best_F": 0.8168257812634165
+  },
+  {
+   "instance": "INST-C",
+   "algo": "OSAP",
+   "round": 83,
+   "logical_cost": 13,
+   "refit_best_F": 0.7907850398114159
+  },
+  {
+   "instance": "INST-C",
+   "algo": "OSAP",
+   "round": 84,
+   "logical_cost": 1,
+   "refit_best_F": 0.7707637459655565
+  },
+  {
+   "instance": "INST-C",
+   "algo": "SAP",
+   "round": 80,
+   "logical_cost": 29,
+   "refit_best_F": 0.8042501463415033
+  },
+  {
+   "instance": "INST-C",
+   "algo": "SAP",
+   "round": 81,
+   "logical_cost": 21,
+   "refit_best_F": 0.7902062668844284
+  },
+  {
+   "instance": "INST-C",
+   "algo": "SAP",
+   "round": 82,
+   "logical_cost": 13,
+   "refit_best_F": 0.7902062668844284
+  },
+  {
+   "instance": "INST-C",
+   "algo": "SAP",
+   "round": 83,
+   "logical_cost": 3,
+   "refit_best_F": 0.7707637459655567
+  },
+  {
+   "instance": "INST-C",
+   "algo": "SAP",
+   "round": 84,
+   "logical_cost": 1,
+   "refit_best_F": 0.7707637459655565
+  },
+  {
+   "instance": "INST-D",
+   "algo": "OSAP",
+   "round": 76,
+   "logical_cost": 23,
+   "refit_best_F": 0.8281570707957097
+  },
+  {
+   "instance": "INST-D",
+   "algo": "OSAP",
+   "round": 77,
+   "logical_cost": 15,
+   "refit_best_F": 0.8004059857858528
+  },
+  {
+   "instance": "INST-D",
+   "algo": "OSAP",
+   "round": 78,
+   "logical_cost": 1,
+   "refit_best_F": 0.7783299202044066
+  },
+  {
+   "instance": "INST-D",
+   "algo": "SAP",
+   "round": 75,
+   "logical_cost": 31,
+   "refit_best_F": 0.8262332841419173
+  },
+  {
+   "instance": "INST-D",
+   "algo": "SAP",
+   "round": 76,
+   "logical_cost": 19,
+   "refit_best_F": 0.8052098867803335
+  },
+  {
+   "instance": "INST-D",
+   "algo": "SAP",
+   "round": 77,
+   "logical_cost": 11,
+   "refit_best_F": 0.7895849223356535
+  },
+  {
+   "instance": "INST-D",
+   "algo": "SAP",
+   "round": 78,
+   "logical_cost": 1,
+   "refit_best_F": 0.7783299202044066
+  },
+  {
+   "instance": "INST-E",
+   "algo": "OSAP",
+   "round": 61,
+   "logical_cost": 35,
+   "refit_best_F": 0.9248242351048871
+  },
+  {
+   "instance": "INST-E",
+   "algo": "OSAP",
+   "round": 62,
+   "logical_cost": 27,
+   "refit_best_F": 0.9040985570091796
+  },
+  {
+   "instance": "INST-E",
+   "algo": "OSAP",
+   "round": 63,
+   "logical_cost": 23,
+   "refit_best_F": 0.8731593964252904
+  },
+  {
+   "instance": "INST-E",
+   "algo": "OSAP",
+   "round": 64,
+   "logical_cost": 13,
+   "refit_best_F": 0.8361622957378139
+  },
+  {
+   "instance": "INST-E",
+   "algo": "OSAP",
+   "round": 65,
+   "logical_cost": 5,
+   "refit_best_F": 0.795693979230502
+  },
+  {
+   "instance": "INST-E",
+   "algo": "OSAP",
+   "round": 66,
+   "logical_cost": 1,
+   "refit_best_F": 0.7613195611102187
+  },
+  {
+   "instance": "INST-E",
+   "algo": "SAP",
+   "round": 61,
+   "logical_cost": 33,
+   "refit_best_F": 0.8603481122238688
+  },
+  {
+   "instance": "INST-E",
+   "algo": "SAP",
+   "round": 62,
+   "logical_cost": 31,
+   "refit_best_F": 0.8603481122238688
+  },
+  {
+   "instance": "INST-E",
+   "algo": "SAP",
+   "round": 63,
+   "logical_cost": 27,
+   "refit_best_F": 0.8206976186772228
+  },
+  {
+   "instance": "INST-E",
+   "algo": "SAP",
+   "round": 64,
+   "logical_cost": 17,
+   "refit_best_F": 0.8020407571038586
+  },
+  {
+   "instance": "INST-E",
+   "algo": "SAP",
+   "round": 65,
+   "logical_cost": 7,
+   "refit_best_F": 0.7748317121724665
+  },
+  {
+   "instance": "INST-E",
+   "algo": "SAP",
+   "round": 66,
+   "logical_cost": 1,
+   "refit_best_F": 0.7613195611102187
+  }
+ ],
+ "p3": {
+  "n_routed": 155,
+  "min_routed_over_logical": 0.2857142857142857,
+  "max_logical_among_routed_le35": 35
+ },
+ "summary": {
+  "INST-A": {
+   "f35_star": 0.9423927657903242,
+   "p1_best_F_logical_le35": 0.819892177168534,
+   "p2_best_refit_F": 0.8256382862375928,
+   "overturns": false
+  },
+  "INST-B": {
+   "f35_star": 0.9490574808560127,
+   "p1_best_F_logical_le35": 0.8383226901861128,
+   "p2_best_refit_F": 0.8389377819516448,
+   "overturns": false
+  },
+  "INST-C": {
+   "f35_star": 0.9360242731347583,
+   "p1_best_F_logical_le35": 0.8364289946265505,
+   "p2_best_refit_F": 0.8364289946265517,
+   "overturns": false
+  },
+  "INST-D": {
+   "f35_star": 0.9463860167841229,
+   "p1_best_F_logical_le35": 0.8518995333976789,
+   "p2_best_refit_F": 0.8281570707957097,
+   "overturns": false
+  },
+  "INST-E": {
+   "f35_star": 0.9383097725880861,
+   "p1_best_F_logical_le35": 0.8977083765716141,
+   "p2_best_refit_F": 0.9248242351048871,
+   "overturns": false
+  }
+ },
+ "p2_routed_le35_summary": {
+  "INST-A": {
+   "f35_star": 0.9423927657903242,
+   "p2_best_refit_F_routed_le35": 0.8019270282587572,
+   "algo": "OSAP",
+   "round": 76,
+   "routed": 22,
+   "gap": 0.140465737531567,
+   "null_margin_holds": true
+  },
+  "INST-B": {
+   "f35_star": 0.9490574808560127,
+   "p2_best_refit_F_routed_le35": 0.8389377819516448,
+   "algo": "OSAP",
+   "round": 69,
+   "routed": 34,
+   "gap": 0.1101196989043679,
+   "null_margin_holds": true
+  },
+  "INST-C": {
+   "f35_star": 0.9360242731347583,
+   "p2_best_refit_F_routed_le35": 0.8364289946265517,
+   "algo": "OSAP",
+   "round": 81,
+   "routed": 29,
+   "gap": 0.0995952785082066,
+   "null_margin_holds": true
+  },
+  "INST-D": {
+   "f35_star": 0.9463860167841229,
+   "p2_best_refit_F_routed_le35": 0.8281570707957097,
+   "algo": "OSAP",
+   "round": 76,
+   "routed": 22,
+   "gap": 0.11822894598841327,
+   "null_margin_holds": true
+  },
+  "INST-E": {
+   "f35_star": 0.9383097725880861,
+   "p2_best_refit_F_routed_le35": 0.9040985570091796,
+   "algo": "OSAP",
+   "round": 62,
+   "routed": 28,
+   "gap": 0.034211215578906495,
+   "null_margin_holds": true
+  }
+ }
+}

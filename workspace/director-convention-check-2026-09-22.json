@@ -1,0 +1,83 @@
+{
+ "targets": {
+  "INST-A": {
+   "F_imap_vs_stored": 1.0000000000000004,
+   "EL_tfd_imap": -0.38531585754157516,
+   "EL_thermal_imap": -0.38531585754157516,
+   "F_dmap_vs_stored": 1.0000000000000004,
+   "EL_tfd_dmap": -0.38531585754157505,
+   "EL_thermal_dmap": -0.38531585754157494,
+   "F_TFD(H)_vs_TFD(-H)": 0.3523108768686481,
+   "raw_overlap_imap_dmap": 0.5165589268428666
+  },
+  "INST-B": {
+   "F_imap_vs_stored": 1.0000000000000009,
+   "EL_tfd_imap": -0.36907972824064994,
+   "EL_thermal_imap": -0.36907972824064994,
+   "F_dmap_vs_stored": 1.0000000000000009,
+   "EL_tfd_dmap": -0.36907972824064983,
+   "EL_thermal_dmap": -0.3690797282406499,
+   "F_TFD(H)_vs_TFD(-H)": 0.3542789738892431,
+   "raw_overlap_imap_dmap": 0.5536206088794066
+  },
+  "INST-C": {
+   "F_imap_vs_stored": 1.0000000000000009,
+   "EL_tfd_imap": -0.3393170327287717,
+   "EL_thermal_imap": -0.3393170327287717,
+   "F_dmap_vs_stored": 1.0000000000000009,
+   "EL_tfd_dmap": -0.3393170327287717,
+   "EL_thermal_dmap": -0.33931703272877156,
+   "F_TFD(H)_vs_TFD(-H)": 0.3619387020471395,
+   "raw_overlap_imap_dmap": 0.5746393852193654
+  },
+  "INST-D": {
+   "F_imap_vs_stored": 1.0,
+   "EL_tfd_imap": -0.32783408541187065,
+   "EL_thermal_imap": -0.32783408541187065,
+   "F_dmap_vs_stored": 1.0000000000000009,
+   "EL_tfd_dmap": -0.32783408541187065,
+   "EL_thermal_dmap": -0.32783408541187087,
+   "F_TFD(H)_vs_TFD(-H)": 0.36045738307744996,
+   "raw_overlap_imap_dmap": 0.586451447242403
+  },
+  "INST-E": {
+   "F_imap_vs_stored": 1.0000000000000009,
+   "EL_tfd_imap": -0.356613735689022,
+   "EL_thermal_imap": -0.35661373568902216,
+   "F_dmap_vs_stored": 1.0000000000000009,
+   "EL_tfd_dmap": -0.3566137356890222,
+   "EL_thermal_dmap": -0.3566137356890221,
+   "F_TFD(H)_vs_TFD(-H)": 0.3458978840813617,
+   "raw_overlap_imap_dmap": 0.5515810706635206
+  }
+ },
+ "sign": {
+  "sign+1_mu-12": {
+   "peak": 0.37440334106324524,
+   "t1": 2.3
+  },
+  "sign+1_mu+12": {
+   "peak": 0.1685831460869327,
+   "t1": 1.4
+  },
+  "sign-1_mu-12": {
+   "peak": 0.2745681177658199,
+   "t1": 2.0
+  },
+  "sign-1_mu+12": {
+   "peak": 0.21227261946773046,
+   "t1": 1.6
+  },
+  "published_mu-12": {
+   "peak": 0.374,
+   "t1": 2.3
+  }
+ },
+ "map_invariance": {
+  "n_sign_flipped_labels": 14,
+  "dmap": 0.004009353621546955,
+  "imap_mapped_angles": 0.004009353621546977,
+  "imap_raw_angles": 0.009395653817122006,
+  "abs_diff_mapped": 2.2551405187698492e-17
+ }
+}

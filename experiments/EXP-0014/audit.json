@@ -1,0 +1,54 @@
+{
+  "agent": "critic (adversarial promotion audit, EXP-0014)",
+  "bottom_line": "No exploit found. The diff is confined to workspace/candidate.py (the contract's only editable surface), never touches the sealed target, the scorer or scorekeeper_private, and the improvement is explained by real work the code actually does: a mask-aware circuit family plus refits. The one substantive change worth flagging is that the objective sign convention flipped from 1-|c|^2 to -|c|^2, which is self-consistent and FD-gated, and that the FD gate was weakened (12 coords/h=1e-5 -> 6 coords/h=1e-6) while being strengthened on the dimension that matters (non-full mask). Neither is an exploit. Promotion is clean on the evidence in the diff.",
+  "findings": [
+    {
+      "claim": "The candidate reaches the metric's intent, not just its letter: the score falls because cx gates are genuinely absent from the emitted gate list, not because reported numbers are shaped.",
+      "verdict": "VERIFIED",
+      "severity": "NONE",
+      "note": "masked_block_gates emits a cx only where mask[7*layer+q] is True; the contract says the scorer recomputes C2 from the emitted gate list and discards everything the candidate reports. A lower C2 therefore requires a physically shorter circuit. The only remaining reward channel is fidelity, and that is recomputed by the scorer against the sealed target the candidate never sees. Score = 1000*max(0,F35-F)+C2 cannot be gamed by dropping gates unless fidelity genuinely survives."
+    },
+    {
+      "claim": "No access to sealed or protected material: the diff adds no file reads, no scorekeeper_private path, no target import, and the only sys.path insert is the pre-existing one to the candidate's own directory.",
+      "verdict": "VERIFIED",
+      "severity": "NONE",
+      "note": "build_target is constructed solely from payload['h_cost'], payload['reference_state'] and payload['beta'] \u2014 all contract-declared payload keys. The ANCHOR dict transcribes the five F35 values that CONTRACT.md publishes verbatim in its Metric paragraph, so it is public data, not battery access. Spot-checked all five against the contract text: 0.8955/0.9164/0.9011/0.9228/0.9229, exact match."
+    },
+    {
+      "claim": "The anchor values are used as an acceptance threshold inside the candidate's own search, which is legitimate here but is the closest thing in the diff to metric-letter exploitation.",
+      "verdict": "NOT-FOUND (no exploit)",
+      "severity": "NONE",
+      "note": "The parent cycle explicitly restricted PUBLIC_F35 to 'OBSERVATION ONLY: never feeds any selection'; this cycle drops that restriction and lets ANCHOR + MARGIN gate removals. That is a real change in status, but it is the pre-registered design of HYP-0014 ('accepting a removal only when the refit self-fit fidelity clears the CONTRACT-published per-instance anchor F35 plus a 0.002 margin') and the values are public. Gating on a published number is not the same as reading the battery: the candidate still cannot see the sealed target, so its self-fit F is its own estimate and the scorer's F is computed independently. The MARGIN=0.002 buffer works against the candidate, not for it."
+    },
+    {
+      "claim": "The objective sign convention changed from f = 1 - |c|^2 to f = -|c|^2, and the adjoint gradient was NOT rescaled to match; this is correct because the two differ by an additive constant.",
+      "verdict": "VERIFIED",
+      "severity": "NONE",
+      "note": "d/dtheta of (1-|c|^2) and of (-|c|^2) are identical, so keeping lam = -2*c*T with grad_k = Re(<lam|dpsi_k>) is right. This is exactly the convention the cycle-13 challenger's OBJECTION 1 demanded (lam = -2*<T|psi>*T, grad = Re(<lam|dpsi>)), carried forward unchanged. fit() reports fid = -objective(...), which under the new sign is |c|^2, the fidelity \u2014 consistent, not inflated."
+    },
+    {
+      "claim": "The finite-difference gradient gate was loosened in coverage (12 sampled coordinates -> 6) and its step shrank from 1e-5 to 1e-6 while keeping the same 1e-6 tolerance, which narrows the safety net on the one piece of machinery that could silently misdirect the fit.",
+      "verdict": "PLAUSIBLE (quality, not exploit)",
+      "severity": "PRESENTATION",
+      "note": "This is a weakening, not a hack: a broken gradient would produce WORSE fits and a worse score, so there is no incentive gradient toward sabotaging it. It is also strengthened where it counts \u2014 the gate now runs under a 20-slot NON-full mask, which is the new code path, and asserts mask.sum()==20 before proceeding. Worth noting that h=1e-6 with a 1e-6 absolute tolerance leaves less headroom against central-difference truncation/roundoff than the parent's h=1e-5, so a future tightening should raise h rather than the tolerance. Does not threaten the result."
+    },
+    {
+      "claim": "The baseline-import fallback is not a way to smuggle in a different circuit topology: the import-time gate compares the masked generator element-for-element against baseline.block_gates at mask = all True.",
+      "verdict": "VERIFIED",
+      "severity": "NONE",
+      "note": "_assert_topology checks name, qubits and exact param equality gate-by-gate against _ref_block_gates, plus len==131 and exactly 35 cx. It runs at module import in both the imported and inlined-fallback branches, and a mismatch raises. One narrowing: the parent caught bare Exception on the import and recorded the type; this version catches only ImportError, so a baseline.py that imports but is malformed now propagates instead of silently falling back. That is stricter, not looser."
+    },
+    {
+      "claim": "The improvement magnitude (39.5234 -> 36.92, delta -2.60, about 6.6%) is consistent with real gate removal and does not indicate a shortcut.",
+      "verdict": "VERIFIED",
+      "severity": "NONE",
+      "note": "The incumbent sat at ~35 C2 plus a small residual fidelity debt; a mean score near 36.9 is what you get from a handful of accepted removals with fidelity held at or above anchor on most instances. It is well under the contract's 25% adversarial-audit trigger and well above the ship_at_score of 33.0, so this promotion does not auto-fire the ship condition. Nothing here requires an exploit to explain."
+    },
+    {
+      "claim": "The diff shown ends mid-file (at fit()), so the greedy elimination loop, the deadline handling and prepare() itself are not visible in the audited material.",
+      "verdict": "UNKNOWABLE-TODAY",
+      "severity": "PRESENTATION",
+      "note": "I judged what was provided. Two pre-registered risks from the HYP-0014 challenge live in the untruncated tail and could not be checked here: (a) whether a deadline-truncated stop is recorded as an UPPER BOUND on the crossing cost rather than as the crossing, and (b) whether the round-1 table is complete enough to support the falsifier. Neither is a reward-hacking channel \u2014 both bear on how the NEXT artifact may describe this number. Flagging so the writer does not present a clock-limited cost as the measured crossing."
+    }
+  ]
+}
