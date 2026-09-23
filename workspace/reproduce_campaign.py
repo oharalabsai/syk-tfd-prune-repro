@@ -1,7 +1,7 @@
 """One-command reproduction of the syk-tfd-prune result (called by the package's reproduce.py).
 
-Recomputes, from the shipped code and the five public certified instances, everything the paper
-reports, and exits 0 only if all of it reproduces:
+Recomputes, from the shipped code and the five public certified instances, every reported result
+and exits 0 only if all of it reproduces:
   1. the exact beta = 3 TFD targets (default and instance JW maps) match the sealed npz (1e-9);
   2. the verified |0>^8 -> |I> prep has fidelity 1 in both maps;
   3. the 35-CNOT anchors F35 (best-of-50, both maps) re-simulate from their stored angles (1e-9);
